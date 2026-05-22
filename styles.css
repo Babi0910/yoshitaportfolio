@@ -1,39 +1,39 @@
 :root {
-    --bg-color: #faf5f7;
-    --text-primary: #2d1b2e;
-    --text-secondary: #6e4c6f;
-    --accent: #ff3385;
-    --accent-glow: rgba(255, 51, 133, 0.3);
-    --glass-bg: rgba(255, 255, 255, 0.5);
-    --glass-border: rgba(255, 255, 255, 0.8);
-    --gradient-1: #ffe6f0;
-    --gradient-2: #ffffff;
-    --gradient-3: #fff0f5;
-    --gradient-4: #ffe4e1;
-    --nav-bg: rgba(255, 255, 255, 0.6);
-    --nav-bg-scrolled: rgba(255, 255, 255, 0.9);
-    --card-hover-bg: rgba(255, 255, 255, 0.8);
-    --input-bg: rgba(255, 255, 255, 0.8);
-    --social-bg: rgba(0, 0, 0, 0.03);
+    --bg-color: #06020f;
+    --text-primary: #ff9aff;
+    --text-secondary: #c98cff;
+    --accent: #a77eff;
+    --accent-glow: rgba(167, 126, 255, 0.45);
+    --glass-bg: rgba(15, 10, 25, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --gradient-1: #06020f;
+    --gradient-2: #120429;
+    --gradient-3: #10031f;
+    --gradient-4: #09010e;
+    --nav-bg: rgba(10, 8, 20, 0.85);
+    --nav-bg-scrolled: rgba(10, 8, 20, 0.95);
+    --card-hover-bg: rgba(255, 255, 255, 0.08);
+    --input-bg: rgba(255, 255, 255, 0.05);
+    --social-bg: rgba(255, 255, 255, 0.04);
 }
 
 [data-theme="dark"] {
-    --bg-color: #0a0a0a;
-    --text-primary: #ffe6f0;
-    --text-secondary: #ff99c2;
-    --accent: #ff3385;
-    --accent-glow: rgba(255, 51, 133, 0.5);
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --gradient-1: #0a0a0a;
-    --gradient-2: #1a0a1a;
-    --gradient-3: #200a12;
-    --gradient-4: #0a0a0a;
-    --nav-bg: rgba(10, 10, 10, 0.6);
-    --nav-bg-scrolled: rgba(10, 10, 10, 0.9);
-    --card-hover-bg: rgba(255, 255, 255, 0.1);
-    --input-bg: rgba(255, 255, 255, 0.03);
-    --social-bg: rgba(255, 255, 255, 0.05);
+    --bg-color: #06020f;
+    --text-primary: #ff9aff;
+    --text-secondary: #c98cff;
+    --accent: #a77eff;
+    --accent-glow: rgba(167, 126, 255, 0.45);
+    --glass-bg: rgba(15, 10, 25, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --gradient-1: #06020f;
+    --gradient-2: #120429;
+    --gradient-3: #10031f;
+    --gradient-4: #09010e;
+    --nav-bg: rgba(10, 8, 20, 0.85);
+    --nav-bg-scrolled: rgba(10, 8, 20, 0.95);
+    --card-hover-bg: rgba(255, 255, 255, 0.08);
+    --input-bg: rgba(255, 255, 255, 0.05);
+    --social-bg: rgba(255, 255, 255, 0.04);
 }
 
 * {
@@ -58,6 +58,16 @@ body {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+}
+
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
 }
 
 /* Custom Cursor: Rotating Diamond */
@@ -162,6 +172,7 @@ body {
 }
 
 .theme-toggle {
+    display: none !important;
     background: transparent;
     border: none;
     color: var(--text-primary);

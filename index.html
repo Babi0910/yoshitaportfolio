@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R Yoshita | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Space+Grotesk:wght@400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
+    <!-- 3D Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
     <!-- Custom Cursor -->
     <div class="cursor-dot" data-cursor-dot></div>
     <div class="cursor-outline" data-cursor-outline></div>
@@ -42,17 +49,19 @@
             <div class="gradient-sphere sphere-2"></div>
         </div>
         <div class="hero-content reveal">
-            <div class="greeting">Hi, I'm</div>
+            <div class="greeting">Hello!, I'm</div>
             <h1 class="glitch-text" data-text="R YOSHITA">R YOSHITA</h1>
             <h2 class="roles">
                 <span class="typing-text"></span><span class="cursor">|</span>
             </h2>
-            <p class="hero-desc">Computer Science & Engineering student specializing in Networks, crafting scalable digital solutions and secure architectures.</p>
+            <p class="hero-desc">Computer Science & Engineering student specializing in Networks, crafting scalable
+                digital solutions and secure architectures.</p>
             <div class="cta-group">
                 <a href="#projects" class="btn primary-btn">Explore Work <i class="fas fa-arrow-right"></i></a>
                 <a href="#contact" class="btn secondary-btn">Get In Touch</a>
             </div>
         </div>
+
         <div class="scroll-indicator">
             <div class="mouse">
                 <div class="wheel"></div>
@@ -67,16 +76,18 @@
             <h2 class="section-title reveal">About <span>Me</span></h2>
             <div class="about-grid">
                 <div class="about-text reveal fade-left">
-                    <p>I am a passionate technology enthusiast currently pursuing my B.Tech in CSE with a specialization in Networks at Madanapalle Institute of Technology & Science. With a strong foundation in both software development and network architecture, I strive to bridge the gap between applications and the infrastructure that supports them.</p>
+                    <p>I am a passionate technology enthusiast currently pursuing my B.Tech in CSE with a specialization
+                        in Networks at Madanapalle Institute of Technology & Science. With a strong foundation in both
+                        software development and network architecture, I strive to bridge the gap between applications
+                        and the infrastructure that supports them.</p>
                     <p>I'm constantly eager to learn, adapt, and solve complex problems in real-world scenarios.</p>
-                    
+
                     <div class="contact-info-pills">
                         <div class="pill"><i class="fas fa-envelope"></i> yoshita.ramireddygari@gmail.com</div>
-                        <div class="pill"><i class="fas fa-phone"></i> +91-8309993231</div>
                         <div class="pill"><i class="fas fa-map-marker-alt"></i> Chittoor, AP, India</div>
                     </div>
                 </div>
-                
+
                 <div class="education-timeline reveal fade-right">
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
@@ -116,6 +127,7 @@
                         <span>CSS</span>
                         <span>DSA</span>
                         <span>C</span>
+                        <span>Kotlin</span>
                     </div>
                 </div>
                 <div class="skill-category reveal fade-up" style="transition-delay: 0.2s;">
@@ -165,7 +177,8 @@
                     <div class="project-info">
                         <div class="project-meta">3 Months | Mac OS</div>
                         <h3>Full-Stack Canteen Management System</h3>
-                        <p>Developed a responsive food ordering system allowing users to browse menus, manage carts, and place orders securely.</p>
+                        <p>Developed a responsive food ordering system allowing users to browse menus, manage carts, and
+                            place orders securely.</p>
                         <div class="project-tech">
                             <span>Python (Django)</span>
                             <span>React</span>
@@ -180,7 +193,8 @@
                     <div class="project-info">
                         <div class="project-meta">2 Months | Linux, Windows</div>
                         <h3>Secure Campus Network Design</h3>
-                        <p>Scalable LAN/WAN campus network developed in Cisco Packet Tracer using VLAN segmentation and dynamic routing (RIP, OSPF).</p>
+                        <p>Scalable LAN/WAN campus network developed in Cisco Packet Tracer using VLAN segmentation and
+                            dynamic routing (RIP, OSPF).</p>
                         <div class="project-tech">
                             <span>Cisco Packet Tracer</span>
                             <span>Python</span>
@@ -195,7 +209,9 @@
                     <div class="project-info">
                         <div class="project-meta">Innovation Project</div>
                         <h3>FoodRides Platform</h3>
-                        <p>An innovative ride-sharing application that allows customers to share rides with food delivery drivers heading to the same destination, providing highly cost-effective transportation.</p>
+                        <p>An innovative ride-sharing application that allows customers to share rides with food
+                            delivery drivers heading to the same destination, providing highly cost-effective
+                            transportation.</p>
                         <div class="project-tech">
                             <span>React</span>
                             <span>Node.js</span>
@@ -211,7 +227,9 @@
                     <div class="project-info">
                         <div class="project-meta">AI / Machine Learning</div>
                         <h3>AI Resume Analyzer</h3>
-                        <p>An intelligent web application leveraging natural language processing to automatically evaluate, score, and provide actionable feedback on resumes to boost job application success.</p>
+                        <p>An intelligent web application leveraging natural language processing to automatically
+                            evaluate, score, and provide actionable feedback on resumes to boost job application
+                            success.</p>
                         <div class="project-tech">
                             <span>Python</span>
                             <span>NLP</span>
@@ -268,7 +286,7 @@
                         </li>
                     </ul>
                 </div>
-                
+
                 <div class="awards reveal fade-right">
                     <h2 class="section-title">Milestones & <span>Extra-Curriculars</span></h2>
                     <div class="award-cards">
@@ -317,7 +335,7 @@
                         <span>Email</span>
                     </a>
                 </div>
-                
+
                 <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
                     <div class="input-group">
                         <input type="text" placeholder="Your Name" required>
@@ -328,7 +346,8 @@
                     <div class="input-group">
                         <textarea placeholder="Your Message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn primary-btn submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                    <button type="submit" class="btn primary-btn submit-btn">Send Message <i
+                            class="fas fa-paper-plane"></i></button>
                 </form>
             </div>
         </div>
@@ -338,6 +357,9 @@
         <p>&copy; 2026 R Yoshita. All rights reserved.</p>
     </footer>
 
+    <!-- Three.js for 3D Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

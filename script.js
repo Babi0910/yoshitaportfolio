@@ -154,3 +154,75 @@ themeToggle.addEventListener('click', () => {
         icon.classList.add('fa-sun');
     }
 });
+
+// --- 3D Background Animation (Three.js) ---
+const canvas = document.getElementById('bg-canvas');
+if (canvas && typeof THREE !== 'undefined') {
+    const scene = new THREE.Scene();
+    
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 30;
+
+    const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+
+    // Particles
+    const particlesGeometry = new THREE.BufferGeometry();
+    const particlesCount = 1000; 
+    const posArray = new Float32Array(particlesCount * 3);
+
+    for (let i = 0; i < particlesCount * 3; i++) {
+        posArray[i] = (Math.random() - 0.5) * 100;
+    }
+    particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+    const particlesMaterial = new THREE.PointsMaterial({
+        size: 0.15,
+        color: 0xff3385,
+        transparent: true,
+        opacity: 0.8,
+        blending: THREE.AdditiveBlending
+    });
+
+    const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+    scene.add(particlesMesh);
+
+    // Mouse interactivity
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetX = 0;
+    let targetY = 0;
+    
+    document.addEventListener('mousemove', (event) => {
+        mouseX = (event.clientX - window.innerWidth / 2);
+        mouseY = (event.clientY - window.innerHeight / 2);
+    });
+
+    // Resize handler
+    window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+
+    const clock = new THREE.Clock();
+
+    function animate3D() {
+        requestAnimationFrame(animate3D);
+        
+        const elapsedTime = clock.getElapsedTime();
+        
+        particlesMesh.rotation.y = elapsedTime * 0.05;
+        particlesMesh.rotation.x = elapsedTime * 0.02;
+
+        targetX = mouseX * 0.001;
+        targetY = mouseY * 0.001;
+
+        particlesMesh.position.x += 0.05 * (targetX - particlesMesh.position.x);
+        particlesMesh.position.y += 0.05 * (-targetY - particlesMesh.position.y);
+
+        renderer.render(scene, camera);
+    }
+    animate3D();
+}
